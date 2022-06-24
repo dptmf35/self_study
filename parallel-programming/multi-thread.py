@@ -5,13 +5,13 @@ def test() :
     time.sleep(1)
     print('Work Finished!')
 
-# if __name__ == '__main__' :
-#     start = time.time()
-#
-#     for i in range(10) :
-#         test()
-#
-#     print(f'Run Time : {time.time() - start :.4f}') ---> normal
+if __name__ == '__main__' :
+    start = time.time()
+
+    for i in range(10) :
+        test()
+
+    print(f'Run Time : {time.time() - start :.4f}') #---> normal
 
 if __name__ == '__main__' :
     start =time.time()
