@@ -11,16 +11,16 @@ def test(x) :
 
 if __name__ == '__main__' :
     start =time.time()
-#
-#     with futures.ProcessPoolExecutor() as e :
-#         sub = [(i, i+999) for i in range(1, 10000, 1000)]
-#         result = e.map(test ,sub)
-#
-#     print(list(result))
-#
-#     print(f'Run Time : {time.time() - start :.4f}') # --> multi-thread
 
-    s = 1
-    for i in range(1, 10000) :
-        s *= i
-    print(f'Run Time : {time.time() - start :.4f}')
+    with futures.ProcessPoolExecutor() as e :
+        sub = [(i, i+999) for i in range(1, 10000, 1000)]
+        result = e.map(test ,sub)
+
+    print(list(result))
+
+    print(f'Run Time : {time.time() - start :.4f}') # --> multi-thread
+
+    # s = 1
+    # for i in range(1, 10000) :
+    #     s *= i
+    # print(f'Run Time : {time.time() - start :.4f}') --> one process
